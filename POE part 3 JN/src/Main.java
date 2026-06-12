@@ -3,7 +3,6 @@ void main() {
     void class Main {
 
         public static void main(String[] args) {
-
         }
 
         public static void storedMessagesMenu(MessageManager manager, Scanner scanner) {
@@ -29,11 +28,13 @@ void main() {
                     String id = scanner.nextLine();
                     manager.searchByMessageID(id);
                 }
+               
                 case 4 -> {
                     System.out.print("Enter recipient: ");
                     String rec = scanner.nextLine();
                     manager.searchMessagesByRecipient(rec);
                 }
+               
                 case 5 -> {
                     System.out.print("Enter hash: ");
                     String hash = scanner.nextLine();
