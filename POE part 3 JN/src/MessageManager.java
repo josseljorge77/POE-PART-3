@@ -7,11 +7,8 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 public class MessageManager {
-
-    // Parte 2 — você já tinha
+    
     private ArrayList<Message> sentMessages = new ArrayList<>();
-
-    // Parte 3 — arrays exigidos
     private ArrayList<Message> disregardedMessages = new ArrayList<>();
     private ArrayList<Message> storedMessages = new ArrayList<>();
     private ArrayList<String> messageHashes = new ArrayList<>();
@@ -22,7 +19,6 @@ public class MessageManager {
         loadStoredMessagesFromJSON();
     }
 
-    // Parte 2 — manter
     public void addMessage(Message m) {
         sentMessages.add(m);
     }
@@ -120,7 +116,6 @@ public class MessageManager {
         }
     }
 
-
     public void deleteMessageByHash(String hash) {
         for (Message msg : storedMessages) {
             if (msg.getMessageHash().equals(hash)) {
@@ -131,7 +126,6 @@ public class MessageManager {
         }
         System.out.println("Hash not found.");
     }
-
 
     public void displayFullReport() {
         for (Message msg : storedMessages) {
@@ -170,6 +164,4 @@ public class MessageManager {
             m5.sentMessage(3);
             storedMessages.add(m5);
         }
-
-
 }
